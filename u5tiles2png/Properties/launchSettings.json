@@ -1,7 +1,8 @@
 {
   "profiles": {
     "u5tiles2png": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "f:\\lzw\\yyy.lzw f:\\lzw\\xxx.png c"
     }
   }
 }
