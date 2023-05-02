@@ -10,22 +10,22 @@ namespace u5tiles2png
     internal class PNGHelper
     {
         Color[] color_array = {
-            Color.FromArgb(0, 0, 0),        //black
-            Color.FromArgb(0, 0, 160),      //dark blue
-            Color.FromArgb(0, 160, 0),      //dark green
-            Color.FromArgb(0, 160, 160),    //blue green
-            Color.FromArgb(160, 0, 0),      //maroon
-            Color.FromArgb(160, 0, 160),    //dark purple
-            Color.FromArgb(160, 80, 0),    //brown
-            Color.FromArgb(160, 160, 160),  //light grey
-            Color.FromArgb(80, 80, 80),     //dark grey
-            Color.FromArgb(0, 0, 255),      //blue
-            Color.FromArgb(80, 255, 80),    //light green
-            Color.FromArgb(80, 255, 255),   //light blue
-            Color.FromArgb(255, 80, 80),    //light red
-            Color.FromArgb(255, 80, 255),   //light purple
-            Color.FromArgb(255, 255, 80),   //yellow
-            Color.FromArgb(255, 255, 255)   //white
+            Color.FromArgb(0, 0, 0),            //black
+            Color.FromArgb(0, 0, 0xAA),         //blue
+            Color.FromArgb(0, 0xAA, 0),         //green
+            Color.FromArgb(0, 0xAA, 0xAA),      //cyan
+            Color.FromArgb(0xAA, 0, 0),         //red
+            Color.FromArgb(0xAA, 0, 0xAA),      //magenta
+            Color.FromArgb(0xAA, 0x55, 0),      //brown
+            Color.FromArgb(0xAA, 0xAA, 0xAA),   //light gray
+            Color.FromArgb(80, 0x55, 0x55),     //dark gray
+            Color.FromArgb(0, 0, 0xFF),         //bright blue
+            Color.FromArgb(0x55, 0xFF, 80),     //bright green
+            Color.FromArgb(0x55, 0xFF, 0xFF),   //bright cyan
+            Color.FromArgb(0xFF, 0x55, 0x55),   //bright red
+            Color.FromArgb(0xFF, 0x55, 0xFF),   //bright magenta
+            Color.FromArgb(0xFF, 0xFF, 0x55),   //bright yellow
+            Color.FromArgb(0xFF, 0xFF, 0xFF)    //white
         };
 
         private Color GetColor(byte curByte)
