@@ -66,10 +66,12 @@ namespace U5Apple2TileEditor
 
         private void lbTileSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(null == file_bytes)
+            if (null == file_bytes)
             {
                 return;
             }
+
+            enable_checkbox_refreshes(false);
 
             for (int xPos = 0; xPos < 2; xPos++)
             {
@@ -116,7 +118,56 @@ namespace U5Apple2TileEditor
                     tempOffset += 0x100;
                 }
             }
-            
+            enable_checkbox_refreshes(true);
+            for(int curRow = 0; curRow < 16; ++curRow)
+            {
+                for (int indexX = 0; indexX < 14; indexX++)
+                {
+                    setColor(indexX, curRow);
+                }
+            }
+
+            pbTile.Refresh();
+        }
+
+        private void enable_checkbox_refreshes(bool bIsEnabled)
+        {
+            if(bIsEnabled)
+            {
+                for (int xPos = 0; xPos < 2; xPos++)
+                {
+                    for (int yPos = 0; yPos < 16; yPos++)
+                    {
+                        cbBSArray[xPos, yPos].CheckedChanged += Form1_CheckedChanged;
+                    }
+                }
+
+                for (int xPos = 0; xPos < 14; xPos++)
+                {
+                    for (int yPos = 0; yPos < 16; yPos++)
+                    {
+                        cbArray[xPos, yPos].CheckedChanged += Form1_CheckedChanged;
+                    }
+                }
+            }
+            else
+            {
+                for (int xPos = 0; xPos < 2; xPos++)
+                {
+                    for (int yPos = 0; yPos < 16; yPos++)
+                    {
+                        cbBSArray[xPos, yPos].CheckedChanged -= Form1_CheckedChanged;
+                    }
+                }
+
+                for (int xPos = 0; xPos < 14; xPos++)
+                {
+                    for (int yPos = 0; yPos < 16; yPos++)
+                    {
+                        cbArray[xPos, yPos].CheckedChanged -= Form1_CheckedChanged;
+                    }
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
