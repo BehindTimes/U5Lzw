@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "u5tiles2png", "u5tiles2png\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U5AppleTiles", "U5AppleTiles\U5AppleTiles.csproj", "{02F9F1B2-74E3-4772-8104-570663BA5D1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U5Apple2TileEditor", "U5Apple2TileEditor\U5Apple2TileEditor.csproj", "{E02F612F-825B-4476-9808-44D108059158}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{02F9F1B2-74E3-4772-8104-570663BA5D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02F9F1B2-74E3-4772-8104-570663BA5D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02F9F1B2-74E3-4772-8104-570663BA5D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02F612F-825B-4476-9808-44D108059158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02F612F-825B-4476-9808-44D108059158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02F612F-825B-4476-9808-44D108059158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02F612F-825B-4476-9808-44D108059158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
