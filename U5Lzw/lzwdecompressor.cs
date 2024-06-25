@@ -417,6 +417,9 @@ namespace U5Lzw
 
         int build_dictionary(byte[] file_bytes, int start_pos, BinaryWriter binWriter)
         {
+            code_word_remainder = 0;
+            code_word_shift = 0;
+
             int next_free_codeword = 0x102;
             int codeword_size = 9;
             List<List<byte>> cur_dict = new List<List<byte>>();
